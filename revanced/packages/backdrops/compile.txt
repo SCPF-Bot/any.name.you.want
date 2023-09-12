@@ -51,7 +51,7 @@ echo "COMPILING BACKDROPS"
 if [ -f "com.backdrops.wallpapers.apk" ]
 then
     echo "PATCHING BACKDROPS"
-    java -jar cli.jar -m integrations.apk -b patches.jar \
+    java -jar cli.jar vanced-cli -hV list-patches \
         ${patches[@]} \
         $EXPERIMENTAL \
         -a com.backdrops.wallpapers.apk -o output/backdrops.apk
