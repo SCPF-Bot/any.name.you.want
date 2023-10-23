@@ -57,14 +57,14 @@ jobs:
     - name: Download
       if: inputs.BUILD
       run: |
-        cd revanced/packages/reddit
+        cd revanced/packages/backdrops
         chmod +x download.sh
         ./download.sh
 
     - name: Compile
       if: inputs.BUILD
       run: |
-        cd revanced/packages/reddit
+        cd revanced/packages/backdrops
         chmod +x compile.sh
         ./compile.sh
 
