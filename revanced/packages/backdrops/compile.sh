@@ -51,10 +51,12 @@ echo "COMPILING BACKDROPS"
 if [ -f "com.backdrops.wallpapers.apk" ]
 then
     echo "PATCHING BACKDROPS"
-    java -jar cli.jar patch -m integrations.apk -b patches.jar \
-        ${patches[@]} \
-        $EXPERIMENTAL \
-        -o output/backdrops.apk com.backdrops.wallpapers.apk
+    java -jar cli.jar patch -m integrations.apk \
+     -b patches.jar \
+     ${patches[@]} \
+     $EXPERIMENTAL \
+     -o output/backdrops.apk \
+     com.backdrops.wallpapers.apk
 else
     echo "NO BASE PACKAGE, SKIP COMPILING BACKDROPS"
 fi
