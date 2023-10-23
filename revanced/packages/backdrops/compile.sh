@@ -31,7 +31,7 @@ fi
 
 echo "SET EXPERIMENTAL"
 if [[ "$1" == "experimental" ]]; then
-    EXPERIMENTAL="--experimental"
+    EXPERIMENTAL="-f"
 fi
 
 ###################################
