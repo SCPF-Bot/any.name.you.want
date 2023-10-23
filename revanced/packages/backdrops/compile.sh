@@ -54,7 +54,7 @@ then
     java -jar cli.jar patch -m integrations.apk -b patches.jar \
         ${patches[@]} \
         $EXPERIMENTAL \
-        -a com.backdrops.wallpapers.apk -o output/backdrops.apk
+        -o output/backdrops.apk
 else
     echo "NO BASE PACKAGE, SKIP COMPILING BACKDROPS"
 fi
