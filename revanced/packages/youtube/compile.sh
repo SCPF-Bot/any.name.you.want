@@ -51,10 +51,12 @@ echo "COMPILING YOUTUBE"
 if [ -f "com.google.android.youtube.apk" ]
 then
     echo "PATCHING YOUTUBE"
-    java -jar cli.jar patch -m integrations.apk -b patches.jar \
-        ${patches[@]} \
-        $EXPERIMENTAL \
-        com.google.android.youtube.apk -o output/youtube.apk
+    java -jar cli.jar patch -m integrations.apk \
+     -b patches.jar \
+     ${patches[@]} \
+     $EXPERIMENTAL \
+     -o output/youtube.apk \
+     com.google.android.youtube.apk
 else
     echo "NO BASE PACKAGE, SKIP COMPILING YOUTUBE"
 fi
