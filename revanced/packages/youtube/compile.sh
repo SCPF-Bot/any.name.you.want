@@ -31,7 +31,7 @@ fi
 
 echo "SET EXPERIMENTAL"
 if [[ "$1" == "experimental" ]]; then
-    EXPERIMENTAL="--experimental"
+    EXPERIMENTAL="-f"
 fi
 
 ###################################
@@ -51,10 +51,10 @@ echo "COMPILING YOUTUBE"
 if [ -f "com.google.android.youtube.apk" ]
 then
     echo "PATCHING YOUTUBE"
-    java -jar cli.jar -m integrations.apk -b patches.jar \
+    java -jar cli.jar patch -m integrations.apk -b patches.jar \
         ${patches[@]} \
         $EXPERIMENTAL \
-        -a com.google.android.youtube.apk -o output/youtube.apk
+        com.google.android.youtube.apk -o output/youtube.apk
 else
     echo "NO BASE PACKAGE, SKIP COMPILING YOUTUBE"
 fi
